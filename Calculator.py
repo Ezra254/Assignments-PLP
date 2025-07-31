@@ -1,10 +1,8 @@
 while True:
-    # Get input from user
     num1 = float(input("Enter first number: "))
     num2 = float(input("Enter second number: "))
     operation = input("Enter operation (+, -, *, /): ")
 
-    # Perform the operation and store result
     if operation == '+':
         result = num1 + num2
     elif operation == '-':
@@ -21,11 +19,9 @@ while True:
         print("Invalid operation!")
         continue
 
-    # Print the result
     print(f"{num1} {operation} {num2} = {result}")
 
-    # Ask if the user wants to perform another calculation
-    again = input("Do you want to perform another calculation? (yes/no): ").lower()
-    if again != 'yes':
+    again = input("Do you want to perform another calculation? (y/n): ")
+    if again != 'y':
         print("Goodbye!")
         break
